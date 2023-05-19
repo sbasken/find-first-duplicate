@@ -1,5 +1,14 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  const foundNumbers = [];
+  let result = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (foundNumbers.includes(arr[i])) {
+      result = arr[i];
+      return result
+    }
+    foundNumbers.push(arr[i])
+  }
+  return result
 }
 
 if (require.main === module) {
